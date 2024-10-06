@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List With Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/favicon-32x32.png">
+</head>
+<body>
+
+    <div class="confirmed-order" id="confirmed-order">
+
+        <div class="confirmed-order-style">
+            
+            <div class="close" onclick="confirmedOrder.style.cssText = `display: none`;">X</div>
+            <img src="imgs/icon-order-confirmed.svg" class="c-o-img">
+            <div class="c-o-head-text">Order Confirmed</div>
+            <div class="c-o-text">We hope you enjoy your food.</div>
+            <div id="addedOrders2"></div>
+            <div class="order-total">
+                <div class="cart-text">Order Total</div>
+                <div id="total2"></div> <!-- ID: total -->
+            </div>
+            <button class="startNewOrder" onclick="startNewOrder()">Start New Order</button>
+
+        </div>
+
+    </div>
+
+    <div class="mobile-cart" id="mobile-cart">
+        <div id="cartCounter2">0</div>
+        <img src="imgs/icon-add-to-cart.svg">
+    </div>
+
+    <div class="main-con">
+
+        <div class="main-con-style">
+
+            <!-- head text -->
+            <div class="head-text">Desserts</div>
+
+            <!-- items con && cart  -->
+            <div class="items-and-cart-con">
+
+                <!-- Itmes con -->
+                <div class="new-item">
+
+                    <!-- Item 1 -->
+                    <div class="item" id="item1">
+
+                        <!-- item img -->
+                        <img src="imgs/image-waffle-desktop.jpg" class="item-img">
+
+                        <!-- btns con -->
+                        <div class="item-btns">
+
+                            <!-- Add to cart btn -->
+                            <div class="add-to-cart" id="addToCartStyle1"> <!-- ID: addToCartStyle-->
+                                <button id="addToCart1" class="addToCart" onclick="addToCartbtn();"><img src="imgs/icon-add-to-cart.svg">Add to Cart</button> <!-- ID: addToCart -->
+                                <button id="amount1" class="amount" onclick="stylingBtnAmount()">Count</button> <!-- ID: amount -->
+                            </div>
+
+                            <!-- count btn -->
+                            <div class="count-btn" id="countBtnStyle1"> <!-- ID: countBtnStyle-->
+                                <div class="count-btn-style">
+                                    <div id="mines-sign1" class="mines-sign" onclick="minesSignFun()">-</div> <!-- ID: mines-sign -->
+                                    <input type="number" value="1" inputmode="numeric" id="count1" class="count"> <!-- ID: count -->
+                                    <div id="plus-sign1" class="plus-sign" onclick="plusSignFun()">+</div> <!-- ID: plus-sign -->
+                                </div>
+                                <button id="done1" class="done" onclick="stylingBtnDone()">✔</button> <!-- ID: done -->
+                            </div>
+
+                        </div>
+
+                        <!-- item information -->
+                        <div class="item-inf">
+                            <div class="item-category">Waffle</div>
+                            <div id="itemTitle1" class="itemTitle">Waffle with Berries</div> <!-- ID: itemTitle -->
+                            <div id="price1" class="price">6.50</div> <!-- ID: price -->
+                        </div>
+
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="item" id="item2">
+
+                        <!-- item img -->
+                        <img src="imgs/image-creme-brulee-desktop.jpg" class="item-img">
+
+                        <!-- btns con -->
+                        <div class="item-btns">
+
+                            <!-- Add to cart btn -->
+                            <div class="add-to-cart" id="addToCartStyle2"> <!-- ID: addToCartStyle-->
+                                <button id="addToCart2" class="addToCart" onclick="addToCartbtn();"><img src="imgs/icon-add-to-cart.svg">Add to Cart</button> <!-- ID: addToCart -->
+                                <button id="amount2" class="amount" onclick="stylingBtnAmount()">Count</button> <!-- ID: amount -->
+                            </div>
+
+                            <!-- count btn -->
+                            <div class="count-btn" id="countBtnStyle2"> <!-- ID: countBtnStyle-->
+                                <div class="count-btn-style">
+                                    <div id="mines-sign2" class="mines-sign" onclick="minesSignFun()">-</div> <!-- ID: mines-sign -->
+                                    <input type="number" value="1" inputmode="numeric" id="count2" class="count"> <!-- ID: count -->
+                                    <div id="plus-sign2" class="plus-sign" onclick="plusSignFun()">+</div> <!-- ID: plus-sign -->
+                                </div>
+                                <button id="done2" class="done" onclick="stylingBtnDone()">✔</button> <!-- ID: done -->
+                            </div>
+
+                        </div>
+
+                        <!-- item information -->
+                        <div class="item-inf">
+                            <div class="item-category">Crème Brûlée</div>
+                            <div id="itemTitle2" class="itemTitle">Vanilla Bean Crème Brûlée</div> <!-- ID: itemTitle -->
+                            <div id="price2" class="price">7.00</div> <!-- ID: price -->
+                        </div>
+
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="item" id="item3">
+
+                        <!-- item img -->
+                        <img src="imgs/image-macaron-desktop.jpg" class="item-img">
+
+                        <!-- btns con -->
+                        <div class="item-btns">
+
+                            <!-- Add to cart btn -->
+                            <div class="add-to-cart" id="addToCartStyle3"> <!-- ID: addToCartStyle-->
+                                <button id="addToCart3" class="addToCart" onclick="addToCartbtn();"><img src="imgs/icon-add-to-cart.svg">Add to Cart</button> <!-- ID: addToCart -->
+                                <button id="amount3" class="amount" onclick="stylingBtnAmount()">Count</button> <!-- ID: amount -->
+                            </div>
+
+                            <!-- count btn -->
+                            <div class="count-btn" id="countBtnStyle3"> <!-- ID: countBtnStyle-->
+                                <div class="count-btn-style">
+                                    <div id="mines-sign3" class="mines-sign" onclick="minesSignFun()">-</div> <!-- ID: mines-sign -->
+                                    <input type="number" value="1" inputmode="numeric" id="count3" class="count"> <!-- ID: count -->
+                                    <div id="plus-sign3" class="plus-sign" onclick="plusSignFun()">+</div> <!-- ID: plus-sign -->
+                                </div>
+                                <button id="done3" class="done" onclick="stylingBtnDone()">✔</button> <!-- ID: done -->
+                            </div>
+
+                        </div>
+
+                        <!-- item information -->
+                        <div class="item-inf">
+                            <div class="item-category">Macaron</div>
+                            <div id="itemTitle3" class="itemTitle">Macaron Mix of Five</div> <!-- ID: itemTitle -->
+                            <div id="price3" class="price">8.00</div> <!-- ID: price -->
+                        </div>
+
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="item" id="item4">
+
+                        <!-- item img -->
+                        <img src="imgs/image-tiramisu-desktop.jpg" class="item-img">
+
+                        <!-- btns con -->
+                        <div class="item-btns">
+
+                            <!-- Add to cart btn -->
+                            <div class="add-to-cart" id="addToCartStyle4"> <!-- ID: addToCartStyle-->
+                                <button id="addToCart4" class="addToCart" onclick="addToCartbtn();"><img src="imgs/icon-add-to-cart.svg">Add to Cart</button> <!-- ID: addToCart -->
+                                <button id="amount4" class="amount" onclick="stylingBtnAmount()">Count</button> <!-- ID: amount -->
+                            </div>
+
+                            <!-- count btn -->
+                            <div class="count-btn" id="countBtnStyle4"> <!-- ID: countBtnStyle-->
+                                <div class="count-btn-style">
+                                    <div id="mines-sign4" class="mines-sign" onclick="minesSignFun()">-</div> <!-- ID: mines-sign -->
+                                    <input type="number" value="1" inputmode="numeric" id="count4" class="count"> <!-- ID: count -->
+                                    <div id="plus-sign4" class="plus-sign" onclick="plusSignFun()">+</div> <!-- ID: plus-sign -->
+                                </div>
+                                <button id="done4" class="done" onclick="stylingBtnDone()">✔</button> <!-- ID: done -->
+                            </div>
+
+                        </div>
+
+                        <!-- item information -->
+                        <div class="item-inf">
+                            <div class="item-category">Tiramisu</div>
+                            <div id="itemTitle4" class="itemTitle">Classic Tiramisu</div> <!-- ID: itemTitle -->
+                            <div id="price4" class="price">5.50</div> <!-- ID: price -->
+                        </div>
+
+                    </div>
+                    
+                    <!-- Item 5 -->
+                    <div class="item" id="item5">
+
+                        <!-- item img -->
+                        <img src="imgs/image-baklava-desktop.jpg" class="item-img">
+
+                        <!-- btns con -->
+                        <div class="item-btns">
+
+                            <!-- Add to cart btn -->
+                            <div class="add-to-cart" id="addToCartStyle5"> <!-- ID: addToCartStyle-->
+                                <button id="addToCart5" class="addToCart" onclick="addToCartbtn();"><img src="imgs/icon-add-to-cart.svg">Add to Cart</button> <!-- ID: addToCart -->
+                                <button id="amount5" class="amount" onclick="stylingBtnAmount()">Count</button> <!-- ID: amount -->
+                            </div>
+
+                            <!-- count btn -->
+                            <div class="count-btn" id="countBtnStyle5"> <!-- ID: countBtnStyle-->
+                                <div class="count-btn-style">
+                                    <div id="mines-sign5" class="mines-sign" onclick="minesSignFun()">-</div> <!-- ID: mines-sign -->
+                                    <input type="number" value="1" inputmode="numeric" id="count5" class="count"> <!-- ID: count -->
+                                    <div id="plus-sign5" class="plus-sign" onclick="plusSignFun()">+</div> <!-- ID: plus-sign -->
+                                </div>
+                                <button id="done5" class="done" onclick="stylingBtnDone()">✔</button> <!-- ID: done -->
+                            </div>
+
+                        </div>
+
+                        <!-- item information -->
+                        <div class="item-inf">
+                            <div class="item-category">Baklava</div>
+                            <div id="itemTitle5" class="itemTitle">Pistachio Baklava</div> <!-- ID: itemTitle -->
+                            <div id="price5" class="price">4.00</div> <!-- ID: price -->
+                        </div>
+
+                    </div>
+                    
+                    <!-- Item 6 -->
+                    <div class="item" id="item6">
+
+                        <!-- item img -->
+                        <img src="imgs/image-meringue-desktop.jpg" class="item-img">
+
+                        <!-- btns con -->
+                        <div class="item-btns">
+
+                            <!-- Add to cart btn -->
+                            <div class="add-to-cart" id="addToCartStyle6"> <!-- ID: addToCartStyle-->
+                                <button id="addToCart6" class="addToCart" onclick="addToCartbtn();"><img src="imgs/icon-add-to-cart.svg">Add to Cart</button> <!-- ID: addToCart -->
+                                <button id="amount6" class="amount" onclick="stylingBtnAmount()">Count</button> <!-- ID: amount -->
+                            </div>
+
+                            <!-- count btn -->
+                            <div class="count-btn" id="countBtnStyle6"> <!-- ID: countBtnStyle-->
+                                <div class="count-btn-style">
+                                    <div id="mines-sign6" class="mines-sign" onclick="minesSignFun()">-</div> <!-- ID: mines-sign -->
+                                    <input type="number" value="1" inputmode="numeric" id="count6" class="count"> <!-- ID: count -->
+                                    <div id="plus-sign6" class="plus-sign" onclick="plusSignFun()">+</div> <!-- ID: plus-sign -->
+                                </div>
+                                <button id="done6" class="done" onclick="stylingBtnDone()">✔</button> <!-- ID: done -->
+                            </div>
+
+                        </div>
+
+                        <!-- item information -->
+                        <div class="item-inf">
+                            <div class="item-category">Pie</div>
+                            <div id="itemTitle6" class="itemTitle">Lemon Meringue Pie</div> <!-- ID: itemTitle -->
+                            <div id="price6" class="price">5.00</div> <!-- ID: price -->
+                        </div>
+
+                    </div>
+                    
+                    <!-- Item 7 -->
+                    <div class="item" id="item7">
+
+                        <!-- item img -->
+                        <img src="imgs/image-cake-desktop.jpg" class="item-img">
+
+                        <!-- btns con -->
+                        <div class="item-btns">
+
+                            <!-- Add to cart btn -->
+                            <div class="add-to-cart" id="addToCartStyle7"> <!-- ID: addToCartStyle-->
+                                <button id="addToCart7" class="addToCart" onclick="addToCartbtn();"><img src="imgs/icon-add-to-cart.svg">Add to Cart</button> <!-- ID: addToCart -->
+                                <button id="amount7" class="amount" onclick="stylingBtnAmount()">Count</button> <!-- ID: amount -->
+                            </div>
+
+                            <!-- count btn -->
+                            <div class="count-btn" id="countBtnStyle7"> <!-- ID: countBtnStyle-->
+                                <div class="count-btn-style">
+                                    <div id="mines-sign7" class="mines-sign" onclick="minesSignFun()">-</div> <!-- ID: mines-sign -->
+                                    <input type="number" value="1" inputmode="numeric" id="count7" class="count"> <!-- ID: count -->
+                                    <div id="plus-sign7" class="plus-sign" onclick="plusSignFun()">+</div> <!-- ID: plus-sign -->
+                                </div>
+                                <button id="done7" class="done" onclick="stylingBtnDone()">✔</button> <!-- ID: done -->
+                            </div>
+
+                        </div>
+
+                        <!-- item information -->
+                        <div class="item-inf">
+                            <div class="item-category">Cake</div>
+                            <div id="itemTitle7" class="itemTitle">Red Velvet Cake</div> <!-- ID: itemTitle -->
+                            <div id="price7" class="price">4.50</div> <!-- ID: price -->
+                        </div>
+
+                    </div>
+                    
+                    <!-- Item 8 -->
+                    <div class="item" id="item8">
+
+                        <!-- item img -->
+                        <img src="imgs/image-brownie-desktop.jpg" class="item-img">
+
+                        <!-- btns con -->
+                        <div class="item-btns">
+
+                            <!-- Add to cart btn -->
+                            <div class="add-to-cart" id="addToCartStyle8"> <!-- ID: addToCartStyle-->
+                                <button id="addToCart8" class="addToCart" onclick="addToCartbtn();"><img src="imgs/icon-add-to-cart.svg">Add to Cart</button> <!-- ID: addToCart -->
+                                <button id="amount8" class="amount" onclick="stylingBtnAmount()">Count</button> <!-- ID: amount -->
+                            </div>
+
+                            <!-- count btn -->
+                            <div class="count-btn" id="countBtnStyle8"> <!-- ID: countBtnStyle-->
+                                <div class="count-btn-style">
+                                    <div id="mines-sign8" class="mines-sign" onclick="minesSignFun()">-</div> <!-- ID: mines-sign -->
+                                    <input type="number" value="1" inputmode="numeric" id="count8" class="count"> <!-- ID: count -->
+                                    <div id="plus-sign8" class="plus-sign" onclick="plusSignFun()">+</div> <!-- ID: plus-sign -->
+                                </div>
+                                <button id="done8" class="done" onclick="stylingBtnDone()">✔</button> <!-- ID: done -->
+                            </div>
+
+                        </div>
+
+                        <!-- item information -->
+                        <div class="item-inf">
+                            <div class="item-category">Brownie</div>
+                            <div id="itemTitle8" class="itemTitle">Salted Caramel Brownie</div> <!-- ID: itemTitle -->
+                            <div id="price8" class="price">4.50</div> <!-- ID: price -->
+                        </div>
+
+                    </div>
+                    
+                    <!-- Item 9 -->
+                    <div class="item" id="item9">
+
+                        <!-- item img -->
+                        <img src="imgs/image-panna-cotta-desktop.jpg" class="item-img">
+
+                        <!-- btns con -->
+                        <div class="item-btns">
+
+                            <!-- Add to cart btn -->
+                            <div class="add-to-cart" id="addToCartStyle9"> <!-- ID: addToCartStyle-->
+                                <button id="addToCart9" class="addToCart" onclick="addToCartbtn();"><img src="imgs/icon-add-to-cart.svg">Add to Cart</button> <!-- ID: addToCart -->
+                                <button id="amount9" class="amount" onclick="stylingBtnAmount()">Count</button> <!-- ID: amount -->
+                            </div>
+
+                            <!-- count btn -->
+                            <div class="count-btn" id="countBtnStyle9"> <!-- ID: countBtnStyle-->
+                                <div class="count-btn-style">
+                                    <div id="mines-sign9" class="mines-sign" onclick="minesSignFun()">-</div> <!-- ID: mines-sign -->
+                                    <input type="number" value="1" inputmode="numeric" id="count9" class="count"> <!-- ID: count -->
+                                    <div id="plus-sign9" class="plus-sign" onclick="plusSignFun()">+</div> <!-- ID: plus-sign -->
+                                </div>
+                                <button id="done9" class="done" onclick="stylingBtnDone()">✔</button> <!-- ID: done -->
+                            </div>
+
+                        </div>
+
+                        <!-- item information -->
+                        <div class="item-inf">
+                            <div class="item-category">Panna Cotta</div>
+                            <div id="itemTitle9" class="itemTitle">Vanilla Panna Cotta</div> <!-- ID: itemTitle -->
+                            <div id="price9" class="price">6.50</div> <!-- ID: price -->
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Cart con -->
+                <div class="cart" id="cart">
+
+                    <div id="emptyCart"> <!-- ID: emptyCart -->
+
+                        <div id="cartCounter1"></div>
+                        <img src="imgs/illustration-empty-cart.svg" class="empty-cart-img">
+                        <div class="empty-cart-text">Your added items will appear here</div>
+
+                    </div>
+
+                    <div id="cart-with-orders"> <!-- ID: cart-with-orders -->
+
+                        <div id="cartCounter"></div>
+
+                        <div id="addedOrders">
+
+
+
+                        </div>
+
+                        <div class="order-total">
+                            <div class="cart-text">Order Total</div>
+                            <div id="total"></div> <!-- ID: total -->
+                        </div>
+
+                        <div class="cart-btns">
+                            <button class="confirmOrder" onclick="confirmOrder()">Confirm Order</button>
+                            <button id="deleteBtn" onclick="DeleteAll();"></button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="control.js"></script>
+
+</body>
+</html>
