@@ -627,7 +627,7 @@ body{
 }
 
 .mobile-cart:hover{
-    outline: 10px solid #952c0c;
+    outline: 7px solid #952c0c;
 }
 
 #cartCounter2{
@@ -642,6 +642,28 @@ body{
     border-radius: 50%;
 }
 
+#up-arrow{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    background-color: #c1502d;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    z-index: 99;
+    bottom: 37px;
+    right: 90px;
+    transition: all .5s;
+    border: 1px solid white;
+}
+
+#up-arrow:hover{
+    background-color: #952c0c;
+}
 
 @media (max-width: 1050px) {
 
@@ -665,6 +687,7 @@ body{
 
 .cart{
     width: 100%;
+    margin-bottom: 5vh;
 }
 
 .mobile-cart{
@@ -673,6 +696,10 @@ body{
 
 .confirmed-order-style{
     width: 280px;
+}
+
+#up-arrow{
+    display: flex;
 }
 
 }

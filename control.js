@@ -283,6 +283,7 @@ function DeleteAll(){
         emptyCart.style.cssText = `display: flex;`;
         cartWithOrders.style.cssText = `display: none;`;
     }
+    showData();
 }
 
 // confirm order
@@ -308,6 +309,12 @@ mobileCart.onclick = function(){
         top: 120000000,
         behavior: "smooth",
     })
+}
+
+var upArrow = document.getElementById('up-arrow');
+
+upArrow.onclick = function(){
+    window.scroll({top:0, behavior: 'smooth'})
 }
 
 
